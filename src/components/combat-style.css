@@ -34,13 +34,13 @@
     -webkit-transition: all 100ms ease-in;
        -moz-transition: all 100ms ease-in;
             transition: all 100ms ease-in;
-    -webkit-filter: brightness(1) grayscale(1) opacity(.9);
-       -moz-filter: brightness(1) grayscale(1) opacity(.9);
-            filter: brightness(1) grayscale(1) opacity(.9);
+    -webkit-filter: brightness(1) grayscale(.7) opacity(.8);
+       -moz-filter: brightness(1) grayscale(.7) opacity(.8);
+            filter: brightness(1) grayscale(.7) opacity(.8);
 }
 
 .drinkcard-cc:hover{
-    -webkit-filter: brightness(.8) grayscale(.5) opacity(1);
-       -moz-filter: brightness(.8) grayscale(.5) opacity(1);
-            filter: brightness(.8) grayscale(.5) opacity(1);
+    -webkit-filter: brightness(.95) grayscale(.2) opacity(1);
+       -moz-filter: brightness(.95) grayscale(.2) opacity(1);
+            filter: brightness(.95) grayscale(.2) opacity(1);
 }

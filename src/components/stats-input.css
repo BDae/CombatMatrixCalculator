@@ -1,0 +1,9 @@
+.form-group{
+    display: inline-block;
+}
+
+.form-control{
+    margin-bottom: 8px;
+    width: 80%;
+    display: inline-block;
+}

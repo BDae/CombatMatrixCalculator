@@ -1,5 +1,8 @@
 // import logo from './logo.svg';
 import './App.css';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 import FormulaPanel from './components/formula-panel';
 import Blurb from './components/blurb';
 import Formula from './components/formula';
@@ -8,19 +11,18 @@ import CombatantsPanel from './components/combatants-panel';
 import CombatantStyle from './components/combat-style';
 import StatsInput from './components/stats-input';
 import CombatantOutput from './components/combatant-output';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 import CombatantTitle from './components/combatant-title';
 import DefenseDivisor from './components/defense-divisor';
+import Wrapper from './components/wrapper';
 
 function App() {
   return (
     <div className = "App">
       <header/>
+      <Wrapper>
         <Container>
           <Row>
-            <Col> 
+            <Col>
               <FormulaPanel>
                 <Blurb/>
                 <Formula/>
@@ -45,7 +47,8 @@ function App() {
               </CombatantsPanel>
             </Col>
           </Row>
-        </Container>  
+        </Container> 
+      </Wrapper>
     </div>
   );
 }
