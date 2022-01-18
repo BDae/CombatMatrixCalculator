@@ -1,4 +1,21 @@
 .formulaPanel {
     margin-right: 80px;
-    margin-top: 120px;
+    margin-top: 80px;
+}
+
+.blurb {
+    height: 80px;
+    width: 100%;
+}
+
+.formula {
+    margin-top: 80px;
+}
+
+.defenseDivisor {
+    margin-top: 60px;
+}
+
+.results {
+    margin-top: 80px;
 }
