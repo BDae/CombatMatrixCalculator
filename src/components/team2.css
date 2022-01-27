@@ -1,5 +1,6 @@
 .combatantTitle{
     margin-top: 30px;
+    margin-bottom: 10px;
 }
 
 /* Style Buttons */
@@ -8,27 +9,27 @@
     size: 20%;
 }
 
-.cc-selector input{
+._cc-selector input{
     margin:0;padding:0;
      -webkit-appearance:none;
        -moz-appearance:none;
             appearance:none; 
 }
 
-.melee{background-image: url(../../public/melee_bubble.png);}
-.mage{background-image: url(../../public/mage_bubble.png);}
-.range{background-image: url(../../public/range_bubble.png);}
-.other{background-image: url(../../public/other_bubble.png);}
+._melee{background-image: url(../../public/melee_bubble.png);}
+._mage{background-image: url(../../public/mage_bubble.png);}
+._range{background-image: url(../../public/range_bubble.png);}
+._other{background-image: url(../../public/other_bubble.png);}
 
 
-.cc-selector-2 input:active +.drinkcard-cc, .cc-selector input:active +.drinkcard-cc{opacity: .9;}
-.cc-selector-2 input:checked +.drinkcard-cc, .cc-selector input:checked +.drinkcard-cc{
+._cc-selector-2 input:active +._drinkcard-cc, ._cc-selector input:active +._drinkcard-cc{opacity: .9;}
+._cc-selector-2 input:checked +._drinkcard-cc, ._cc-selector input:checked +._drinkcard-cc{
     -webkit-filter: none;
        -moz-filter: none;
             filter: none;
 }
 
-.drinkcard-cc{
+._drinkcard-cc{
     cursor:pointer;
     background-size:contain;
     background-repeat:no-repeat;
@@ -44,7 +45,7 @@
             filter: brightness(1) grayscale(.7) opacity(.8);
 }
 
-.drinkcard-cc:hover{
+._drinkcard-cc:hover{
     -webkit-filter: brightness(.95) grayscale(.2) opacity(1);
        -moz-filter: brightness(.95) grayscale(.2) opacity(1);
             filter: brightness(.95) grayscale(.2) opacity(1);

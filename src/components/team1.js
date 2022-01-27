@@ -1,17 +1,20 @@
-import "./combatant.css";
+import "./team1.css";
 import { useState } from "react";
 
-const Team1 = () => {
+const Team1 = (props) => {
+    const [style, setStyle] = useState("");
     const [health, setHealth] = useState("");
     const [strength, setStrength] = useState("");
     const [attack_speed, setAttackSpeed] = useState("");
     const [defense, setDefense] = useState("");
-    const [multiplier, setMultiplier] = useState("");
     const [base_rate, setBaseRate] = useState("");
     const [accuracy, setAccuracy] = useState("");
 
     const update = (value, field) => {
         //set vairables
+        if (field === "style"){
+            setStyle(value);
+        }
         if (field === "health"){
             setHealth(value);
         }
@@ -24,9 +27,6 @@ const Team1 = () => {
         if (field === "defense"){
             setDefense(value);
         }
-        if (field === "multiplier"){
-            setMultiplier(value);
-        }
         if (field === "base_rate"){
             setBaseRate(value);
         }
@@ -34,11 +34,18 @@ const Team1 = () => {
             setAccuracy(value);
         }
 
-        if (health === "" || strength === "" || attack_speed === "" || defense === "" || multiplier === "" || base_rate === "" || accuracy === ""){
-            return
+        //return data to parent component
+        if (style === "" || health === "" || strength === "" || attack_speed === "" || defense === "" || base_rate === "" || accuracy === ""){
         } else {
-            //return data to parent component
-            
+            props.triggerPopulateTeam1({
+                "style": style,
+                "health": health,
+                "strength": strength,
+                "attack_speed": attack_speed,
+                "defense": defense,
+                "base_rate": base_rate,
+                "accuracy": accuracy
+            })
         }
     }
     return (
@@ -47,13 +54,13 @@ const Team1 = () => {
             <div className="combatantTitle"><h1><u>Combatant 1</u></h1></div>
             {/* Style Selection */}
             <div className="cc-selector">
-                <input id="range" type="radio" name="credit-card" value="range" />
+                <input id="range" type="radio" onChange={event => update("RANGE", "style")} name="credit-card" value="range" />
                 <label className="drinkcard-cc range" htmlFor="range"></label>
-                <input id="mage" type="radio" name="credit-card" value="mage" />
+                <input id="mage" type="radio" onChange={event => update("MAGE", "style")} name="credit-card" value="mage" />
                 <label className="drinkcard-cc mage" htmlFor="mage"></label>
-                <input id="melee" type="radio" name="credit-card" value="melee" />
+                <input id="melee" type="radio" onChange={event => update("MELEE", "style")} name="credit-card" value="melee" />
                 <label className="drinkcard-cc melee" htmlFor="melee"></label>
-                <input id="other" type="radio" name="credit-card" value="other" />
+                <input id="other" type="radio" onChange={event => update("OTHER", "style")} name="credit-card" value="other" />
                 <label className="drinkcard-cc other" htmlFor="other"></label>
             </div>
             {/* Inputs */}
@@ -63,17 +70,15 @@ const Team1 = () => {
                         <label>Health</label><br/>
                         <input className="form-control" type="text" onChange={event => update(event.target.value, "health")} placeholder="Health"/><br/>
                         <label>Strength</label><br/>
-                        <input className="form-control" type="text" placeholder="Strength"/><br/>
+                        <input className="form-control" type="text" onChange={event => update(event.target.value, "strength")} placeholder="Strength"/><br/>
                         <label>Attack Speed</label><br/>
-                        <input className="form-control" type="text" placeholder="Attack Speed"/><br/>
+                        <input className="form-control" type="text" onChange={event => update(event.target.value, "attack_speed")} placeholder="Attack Speed"/><br/>
                         <label>Defense</label><br/>
-                        <input className="form-control" type="text" placeholder="Defense"/><br/>
-                        <label>Adv. Multiplier</label><br/>
-                        <input className="form-control" type="text" placeholder="Adv. Multiplier"/><br/>
+                        <input className="form-control" type="text" onChange={event => update(event.target.value, "defense")}  placeholder="Defense"/><br/>
                         <label>Base Rate Damage</label><br/>
-                        <input className="form-control" type="text" placeholder="Base Rate"/><br/>
+                        <input className="form-control" type="text" onChange={event => update(event.target.value, "base_rate")}  placeholder="Base Rate"/><br/>
                         <label>Accuracy</label><br/>
-                        <input className="form-control" type="number" name="amountInput" min="0" max="100" defaultValue="100" />
+                        <input className="form-control" type="number" onChange={event => update(event.target.value, "accuracy")}  name="amountInput" min="0" max="100" defaultValue="100" />
                     </div>
                 </form>
             </div>

@@ -1,7 +1,7 @@
 import "./formula-panel.css";
 import Form from 'react-bootstrap/Form';
 
-const FormulaPanel = ({ children }) => {
+const FormulaPanel = (props) => {
     return (
     <div className="formulaPanel">
         <div>
@@ -12,10 +12,10 @@ const FormulaPanel = ({ children }) => {
         </div>
         <div className="defenseDivisor">
             <p>Defense Divisor:</p>
-            {/* input field */}
+            <input className="form-control" type="text" placeholder=""/><br/>
         </div>
         <div className="results">
-            <p> winner placeholder</p>
+            <p> Winner: </p>
             <Form.Group className="textarea" controlId="exampleForm.ControlTextarea1">
                 <Form.Control as="textarea" rows={4} disabled />
             </Form.Group>

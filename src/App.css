@@ -1,9 +1,12 @@
+html, body{
+  width:100%;
+  height:100%;
+}
+
 .App {
   text-align: center;
   background: #EFEDEA;
   color:#131154;
-  width:auto;
-  height:auto;
   background: #EFEDEA;
 }
 
